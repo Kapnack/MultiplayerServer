@@ -206,7 +206,7 @@ namespace KapNet
                 if (!client.Value.isConnected || client.Key.Equals(networkPacket.ipEndPoint))
                     continue;
 
-                SendByteArrayRaw(networkPacket.type, networkPacket.metaData, networkPacket.payload);
+                SendByteArrayRaw(client.Key, networkPacket.type, networkPacket.metaData, networkPacket.payload);
             }
         }
 
